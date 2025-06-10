@@ -10,7 +10,7 @@
             Padding="30,0"
             Spacing="25">
 
-            <CollectionView x:Name="CVLista">
+            <CollectionView x:Name="CVLista" SelectionChanged="CVLista_SelectionChanged" SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border BackgroundColor="CadetBlue">

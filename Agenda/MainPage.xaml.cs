@@ -1,4 +1,5 @@
 ﻿using Agenda.Classes;
+using Agenda.Paginas;
 namespace Agenda
 {
     public partial class MainPage : ContentPage
@@ -39,6 +40,12 @@ namespace Agenda
             {
                 await DisplayAlert("Erro ", ex.Message, "Ok");
             }
+        }
+
+        private void CVLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var contatoSelecionado = e.CurrentSelection.FirstOrDefault() as Pessoas;
+            Navigation.PushAsync(new Contato(contatoSelecionado));
         }
     }
 
